@@ -35,7 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
         title: Text('Вход', style: TextStyle(color: Colors.green)),
         backgroundColor: Colors.white,
         elevation: 0,
-        iconTheme: IconThemeData(color: Colors.green),
+        iconTheme: IconThemeData(color: const Color.fromARGB(255, 13, 14, 13)),
       ),
       backgroundColor: Colors.white,
       body: Padding(
