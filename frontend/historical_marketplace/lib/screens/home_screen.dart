@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'product_detail_screen.dart';
+import 'shopping_cart.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -37,19 +39,27 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Поиск
-            Container(
-              margin: const EdgeInsets.only(bottom: 16),
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-              decoration: BoxDecoration(
-                color: Colors.green[100],
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Row(
-                children: const [
-                  Icon(Icons.search, color: Colors.green, size: 28),
-                  SizedBox(width: 8),
-                  Text('Поиск', style: TextStyle(fontSize: 18, color: Colors.green)),
-                ],
+            InkWell(
+              onTap: () {
+                // TODO: Реализовать экран поиска
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Функция поиска будет реализована')),
+                );
+              },
+              child: Container(
+                margin: const EdgeInsets.only(bottom: 16),
+                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                decoration: BoxDecoration(
+                  color: Colors.green[100],
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: const Row(
+                  children: [
+                    Icon(Icons.search, color: Colors.green, size: 28),
+                    SizedBox(width: 8),
+                    Text('Поиск', style: TextStyle(fontSize: 18, color: Colors.green)),
+                  ],
+                ),
               ),
             ),
             // Баннеp/большое изображение
@@ -69,48 +79,65 @@ class HomeScreen extends StatelessWidget {
               spacing: 16,
               runSpacing: 16,
               children: [
-                _ProductCard(),
-                _ProductCard(),
+                _ProductCard(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ProductDetailScreen(),
+                      ),
+                    );
+                  },
+                  onOrderTap: () {
+                    // Переход на экран корзины
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ShoppingCartScreen(),
+                      ),
+                    );
+                  },
+                ),
+                _ProductCard(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ProductDetailScreen(),
+                      ),
+                    );
+                  },
+                  onOrderTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ShoppingCartScreen(),
+                      ),
+                    );
+                  },
+                ),
               ],
             ),
           ],
         ),
       ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withAlpha(13),
-              blurRadius: 8,
-              offset: const Offset(0, -2),
-            ),
-          ],
-        ),
-        child: BottomNavigationBar(
-          backgroundColor: Colors.white,
-          elevation: 0,
-          selectedItemColor: Colors.green,
-          unselectedItemColor: Colors.grey,
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.dashboard), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: ''),
-          ],
-        ),
-      ),
+      // BottomNavigationBar теперь управляется MainNavigationScreen
     );
   }
 }
 
 class _ProductCard extends StatelessWidget {
+  final VoidCallback? onTap;
+  final VoidCallback? onOrderTap;
+
+  const _ProductCard({this.onTap, this.onOrderTap});
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width / 2 - 24,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: MediaQuery.of(context).size.width / 2 - 24,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
@@ -162,9 +189,9 @@ class _ProductCard extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton.icon(
-                    onPressed: () {},
-                    icon: Icon(Icons.shopping_cart, color: Colors.white, size: 20),
-                    label: Text('Заказать'),
+                    onPressed: onOrderTap ?? () {},
+                    icon: const Icon(Icons.shopping_cart, color: Colors.white, size: 20),
+                    label: const Text('Заказать'),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.green,
                       shape: RoundedRectangleBorder(
@@ -179,6 +206,7 @@ class _ProductCard extends StatelessWidget {
             ),
           ),
         ],
+      ),
       ),
     );
   }

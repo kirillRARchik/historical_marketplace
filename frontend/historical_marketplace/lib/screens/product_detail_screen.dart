@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'shopping_cart.dart';
 
 class ProductDetailScreen extends StatelessWidget {
   const ProductDetailScreen({super.key});
@@ -168,7 +169,21 @@ class ProductDetailScreen extends StatelessWidget {
         color: Colors.white,
         padding: const EdgeInsets.fromLTRB(16, 10, 16, 22),
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            // Добавить в корзину и перейти на экран корзины
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text('Товар добавлен в корзину'),
+                duration: Duration(seconds: 1),
+              ),
+            );
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ShoppingCartScreen(),
+              ),
+            );
+          },
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.green,
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),

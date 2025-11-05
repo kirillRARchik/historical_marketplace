@@ -1,0 +1,34 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/historical_marketplace}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driverClassName: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+      encoding: UTF-8
+      schema-locations: file:database/init.sql
+      data-locations: file:database/seed.sql
+
+jwt:
+  secret: change-this-secret-in-prod-please-very-long
+  expirationSeconds: 2592000 # 30 days
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
