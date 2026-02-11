@@ -1,140 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="NONE" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/main.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
-  <component name="ChangeListManager">
-    <list default="true" id="a713b796-11a9-46a9-b1e8-094566bd3076" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../backend/backend/demo/HELP.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/config/WebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/model/Address.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/model/CartItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/model/Favorite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/model/Message.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/model/Notification.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/model/Order.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/model/OrderItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/model/Payment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/model/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/model/Review.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/model/SellerProfile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/repo/Repositories.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/security/JwtService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/security/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/service/PhotoStorageService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/web/AuthController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/web/BuyerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/web/MessageController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/web/NotificationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/web/OrderController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/web/PaymentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/web/ProductController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/web/ReviewController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/java/com/historical/marketplace/web/SellerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/config/WebConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/model/Address.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/model/CartItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/model/Favorite.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/model/Message.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/model/Notification$NotificationType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/model/Notification.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/model/Order$OrderStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/model/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/model/OrderItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/model/Payment$PaymentStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/model/Payment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/model/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/model/Review.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/model/SellerProfile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/repo/AddressRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/repo/CartItemRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/repo/FavoriteRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/repo/MessageRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/repo/NotificationRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/repo/OrderItemRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/repo/OrderRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/repo/PaymentRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/repo/ProductRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/repo/ReviewRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/repo/SellerProfileRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/repo/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/security/JwtService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/security/SecurityConfig$JwtAuthFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/security/SecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/service/PhotoStorageService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/web/AuthController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/web/BuyerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/web/MessageController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/web/NotificationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/web/OrderController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/web/PaymentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/web/ProductController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/web/ReviewController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/marketplace/target/classes/com/historical/marketplace/web/SellerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/historical_marketplace/.dart_tool/flutter_build/31c8bcc68023450d88d4f0fe15bee6c1/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/historical_marketplace/.dart_tool/flutter_build/31c8bcc68023450d88d4f0fe15bee6c1/.filecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/historical_marketplace/.dart_tool/flutter_build/31c8bcc68023450d88d4f0fe15bee6c1/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/historical_marketplace/.dart_tool/flutter_build/31c8bcc68023450d88d4f0fe15bee6c1/app.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/historical_marketplace/.dart_tool/flutter_build/31c8bcc68023450d88d4f0fe15bee6c1/debug_bundle_windows-x64_assets.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/historical_marketplace/.dart_tool/flutter_build/31c8bcc68023450d88d4f0fe15bee6c1/debug_bundle_windows-x64_assets.stamp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/historical_marketplace/.dart_tool/flutter_build/31c8bcc68023450d88d4f0fe15bee6c1/flutter_assets.d" beforeDir="false" afterPath="$PROJECT_DIR$/historical_marketplace/.dart_tool/flutter_build/31c8bcc68023450d88d4f0fe15bee6c1/flutter_assets.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/historical_marketplace/.dart_tool/flutter_build/31c8bcc68023450d88d4f0fe15bee6c1/kernel_snapshot_program.d" beforeDir="false" afterPath="$PROJECT_DIR$/historical_marketplace/.dart_tool/flutter_build/31c8bcc68023450d88d4f0fe15bee6c1/kernel_snapshot_program.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/historical_marketplace/.dart_tool/flutter_build/31c8bcc68023450d88d4f0fe15bee6c1/kernel_snapshot_program.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/historical_marketplace/.dart_tool/flutter_build/31c8bcc68023450d88d4f0fe15bee6c1/kernel_snapshot_program.stamp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/historical_marketplace/android/.gradle/8.9/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/historical_marketplace/android/.gradle/8.9/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/historical_marketplace/android/.gradle/8.9/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/historical_marketplace/android/.gradle/8.9/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/historical_marketplace/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/historical_marketplace/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/historical_marketplace/build/flutter_assets/shaders/ink_sparkle.frag" beforeDir="false" afterPath="$PROJECT_DIR$/historical_marketplace/build/flutter_assets/shaders/ink_sparkle.frag" afterDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
+  <component name="ToolWindowManager">
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+    </layout>
   </component>
-  <component name="ClangdSettings">
-    <option name="formatViaClangd" value="false" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <option name="show-excluded-files" value="false" />
+      </pane>
+    </panes>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3
-}</component>
-  <component name="ProjectId" id="34gJSaU8nobQ23HbCh0IFfzt8iE" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "Rebasing master",
-    "last_opened_file_path": "C:/Users/vyatk/OneDrive/Desktop/historical_marketplace/frontend",
-    "settings.editor.selected.configurable": "dart.settings",
-    "show.migrate.to.gradle.popup": "false"
-  }
-}]]></component>
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="a713b796-11a9-46a9-b1e8-094566bd3076" name="Changes" comment="" />
-      <created>1761629281701</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1761629281701</updated>
-    </task>
-    <servers />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="dart.analysis.tool.window.force.activate" value="true" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
 </project>
