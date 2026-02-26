@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### SSL keystore (secrets) ###
+*.p12
+keystore.p12
