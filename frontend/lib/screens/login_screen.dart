@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import '../services/api_service.dart';
+import '../services/auth_storage.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -13,18 +16,32 @@ class _LoginScreenState extends State<LoginScreen> {
 
   bool isPasswordVisible = false;
 
-  void login() {
+  Future<void> login() async {
     final email = emailController.text.trim();
     final password = passwordController.text;
 
-    // TODO: Add your authentication logic here!
     if (email.isEmpty || password.isEmpty) {
-      // Покажи ошибку
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Заполните все поля")),
+        const SnackBar(content: Text("Заполните все поля")),
       );
-    } else {
-      // Логика логина
+      return;
+    }
+    try {
+      final response = await ApiService.login(email, password);
+      final token = response['token'] as String?;
+      if (token != null && token.isNotEmpty) {
+        await AuthStorage.saveToken(token);
+        if (!mounted) return;
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text("Вход выполнен"), backgroundColor: Colors.green),
+        );
+        context.pop();
+      }
+    } catch (e) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(e.toString().replaceFirst('Exception: ', ''))),
+      );
     }
   }
 
@@ -32,6 +49,10 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.black87),
+          onPressed: () => context.pop(),
+        ),
         title: Text('Вход', style: TextStyle(color: Colors.green)),
         backgroundColor: Colors.white,
         elevation: 0,

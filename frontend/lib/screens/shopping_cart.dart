@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'checkout_screen.dart';
+import 'package:go_router/go_router.dart';
 
 class CartItem {
   final String title;
@@ -136,15 +136,7 @@ class _ShoppingCartScreenState extends State<ShoppingCartScreen> {
         color: Colors.transparent,
         padding: const EdgeInsets.fromLTRB(16, 10, 16, 20),
         child: ElevatedButton(
-          onPressed: () {
-            // Переход на экран оформления заказа
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const CheckoutScreen(),
-              ),
-            );
-          },
+          onPressed: () => context.push('/checkout'),
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.green,
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),

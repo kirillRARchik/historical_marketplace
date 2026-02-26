@@ -1,40 +1,16 @@
 import 'package:flutter/material.dart';
-import 'home_screen.dart';
-import 'shopping_cart.dart';
-import 'profile_screen.dart';
+import 'package:go_router/go_router.dart';
 
-/// Главный экран с навигацией между основными разделами приложения
-class MainNavigationScreen extends StatefulWidget {
-  const MainNavigationScreen({super.key});
+/// Оболочка с нижней навигацией. Используется с go_router StatefulShellRoute.
+class MainNavigationScreen extends StatelessWidget {
+  const MainNavigationScreen({super.key, required this.navigationShell});
 
-  @override
-  State<MainNavigationScreen> createState() => _MainNavigationScreenState();
-}
-
-class _MainNavigationScreenState extends State<MainNavigationScreen> {
-  int _currentIndex = 0;
-
-  // Список экранов для навигации
-  final List<Widget> _screens = [
-    const HomeScreen(),
-    const ShoppingCartScreen(),
-    const ProfileScreen(),
-    // Можно добавить еще экраны (например, категории)
-  ];
-
-  void _onTabTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  }
+  final StatefulNavigationShell navigationShell;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: IndexedStack(
-        index: _currentIndex,
-        children: _screens,
-      ),
+      body: navigationShell,
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
           color: Colors.white,
@@ -49,8 +25,8 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         child: BottomNavigationBar(
           backgroundColor: Colors.white,
           elevation: 0,
-          currentIndex: _currentIndex,
-          onTap: _onTabTapped,
+          currentIndex: navigationShell.currentIndex,
+          onTap: (int index) => navigationShell.goBranch(index),
           selectedItemColor: Colors.green,
           unselectedItemColor: Colors.grey,
           showSelectedLabels: false,
@@ -62,8 +38,8 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
               label: 'Главная',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.dashboard),
-              label: 'Категории',
+              icon: Icon(Icons.grid_view),
+              label: 'Каталог',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.shopping_cart),
@@ -79,4 +55,3 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     );
   }
 }
-

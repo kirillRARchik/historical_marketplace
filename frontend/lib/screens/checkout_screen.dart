@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class CheckoutScreen extends StatefulWidget {
   const CheckoutScreen({super.key});
@@ -19,7 +20,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         backgroundColor: Colors.grey[100],
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.green),
-          onPressed: () => Navigator.of(context).maybePop(),
+          onPressed: () => context.pop(),
         ),
         title: const Text('Оформление заказа', style: TextStyle(color: Colors.black)),
         centerTitle: true,

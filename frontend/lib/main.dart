@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/main_navigation_screen.dart';
+import 'router/app_router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,14 +10,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Historical Marketplace',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
-      home: const MainNavigationScreen(),
+      routerConfig: createAppRouter(),
     );
   }
 }

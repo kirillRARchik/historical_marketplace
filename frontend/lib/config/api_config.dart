@@ -1,13 +1,29 @@
 class ApiConfig {
   // Базовый URL вашего Java-бэкенда
-  // Для локальной разработки:
+  // 
+  // ВАЖНО: Выберите правильный URL в зависимости от того, где запущено приложение:
+  //
+  // 1. Для веб-браузера (Chrome, Edge и т.д.):
+  //    static const String baseUrl = 'http://localhost:8080';
+  //
+  // 2. Для эмулятора Android:
+  //    static const String baseUrl = 'http://10.0.2.2:8080';
+  //    (10.0.2.2 - это специальный адрес эмулятора, указывающий на localhost хоста)
+  //
+  // 3. Для физического Android/iOS устройства:
+  //    Узнайте IP адрес вашего компьютера в локальной сети:
+  //    - Windows: ipconfig (ищите IPv4 адрес, например 192.168.1.100)
+  //    - Mac/Linux: ifconfig или ip addr
+  //    static const String baseUrl = 'http://192.168.1.100:8080';
+  //
+  // 4. Убедитесь, что бэкенд запущен и доступен по выбранному адресу!
+  
+  // Для локальной разработки (веб):
   static const String baseUrl = 'http://localhost:8080';
   
-  // Для эмулятора Android (если запускаете приложение на эмуляторе):
-  // static const String baseUrl = 'http://10.0.2.2:8080';
-  
-  // Для физического устройства (замените на IP вашего компьютера):
-  // static const String baseUrl = 'http://192.168.1.100:8080';
+  // Раскомментируйте одну из строк ниже для мобильных устройств:
+  // static const String baseUrl = 'http://10.0.2.2:8080';  // Android эмулятор
+  // static const String baseUrl = 'http://192.168.1.100:8080';  // Физическое устройство (замените на ваш IP)
   
   // API endpoints
   static const String products = '/api/products';
@@ -19,6 +35,7 @@ class ApiConfig {
   // Полный URL для эндпоинта
   static String getProductsUrl() => '$baseUrl$products';
   static String getProductUrl(int id) => '$baseUrl$products/$id';
+  static String getProductsByCategoryUrl(String category) => '$baseUrl$products/category/${Uri.encodeComponent(category)}';
   static String searchProductsUrl() => '$baseUrl$products/search';
   static String getAuthUrl(String endpoint) => '$baseUrl$auth/$endpoint';
   static String getOrdersUrl() => '$baseUrl$orders';

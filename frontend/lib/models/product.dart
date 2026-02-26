@@ -5,6 +5,7 @@ class Product {
   final double price;
   final int quantity;
   final bool customMade;
+  final String? description;
   final String? sizeMeasure;
   final String? manufacturingMethod;
   final String? category;
@@ -21,6 +22,7 @@ class Product {
     required this.price,
     required this.quantity,
     required this.customMade,
+    this.description,
     this.sizeMeasure,
     this.manufacturingMethod,
     this.category,
@@ -39,6 +41,7 @@ class Product {
       price: (json['price'] ?? 0).toDouble(),
       quantity: json['quantity'] ?? 0,
       customMade: json['customMade'] ?? false,
+      description: json['description'],
       sizeMeasure: json['sizeMeasure'],
       manufacturingMethod: json['manufacturingMethod'],
       category: json['category'],
@@ -58,6 +61,7 @@ class Product {
       'price': price,
       'quantity': quantity,
       'customMade': customMade,
+      'description': description,
       'sizeMeasure': sizeMeasure,
       'manufacturingMethod': manufacturingMethod,
       'category': category,

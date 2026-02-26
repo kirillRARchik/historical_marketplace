@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'product_detail_screen.dart';
-import 'shopping_cart.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -40,12 +39,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             // Поиск
             InkWell(
-              onTap: () {
-                // TODO: Реализовать экран поиска
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Функция поиска будет реализована')),
-                );
-              },
+              onTap: () => context.push('/search'),
               child: Container(
                 margin: const EdgeInsets.only(bottom: 16),
                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -80,41 +74,14 @@ class HomeScreen extends StatelessWidget {
               runSpacing: 16,
               children: [
                 _ProductCard(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ProductDetailScreen(),
-                      ),
-                    );
-                  },
-                  onOrderTap: () {
-                    // Переход на экран корзины
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ShoppingCartScreen(),
-                      ),
-                    );
-                  },
+                  productId: 1,
+                  onTap: () => context.push('/product/1'),
+                  onOrderTap: () => context.go('/cart'),
                 ),
                 _ProductCard(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ProductDetailScreen(),
-                      ),
-                    );
-                  },
-                  onOrderTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ShoppingCartScreen(),
-                      ),
-                    );
-                  },
+                  productId: 2,
+                  onTap: () => context.push('/product/2'),
+                  onOrderTap: () => context.go('/cart'),
                 ),
               ],
             ),
@@ -127,10 +94,11 @@ class HomeScreen extends StatelessWidget {
 }
 
 class _ProductCard extends StatelessWidget {
+  final int? productId;
   final VoidCallback? onTap;
   final VoidCallback? onOrderTap;
 
-  const _ProductCard({this.onTap, this.onOrderTap});
+  const _ProductCard({this.productId, this.onTap, this.onOrderTap});
 
   @override
   Widget build(BuildContext context) {

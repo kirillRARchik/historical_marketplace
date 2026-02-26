@@ -3,7 +3,7 @@
 ## 📋 Что было сделано:
 
 ### 1. **Настройка CORS в Java-бэкенде**
-   - Добавлена конфигурация CORS (Cross-Origin Resource Sharing) в `WebConfig.java` 
+   - Добавлена конфигурация CORS в `WebConfig.java`
    - Разрешены запросы с Flutter-приложения
 
 ### 2. **Структура Flutter-приложения:**
@@ -28,13 +28,13 @@
 
 ### Шаг 1: Установите зависимости Flutter
 ```bash
-cd frontend
+cd frontend/historical_marketplace
 flutter pub get
 ```
 
 ### Шаг 2: Запустите Java-бэкенд
 ```bash
-cd backend/demo
+cd backend/backend/marketplace
 # Запустите Spring Boot приложение (например, через IDE или mvn spring-boot:run)
 ```
 
